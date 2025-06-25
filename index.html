@@ -103,7 +103,7 @@
   'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '3153750001397422');
   fbq('track', 'PageView');
-  fbq('trackCustom', 'PageView_TG_BOT_EAA_VN');
+  fbq('trackCustom', 'Subscribe');
 </script>
 <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=3153750001397422&ev=PageView&noscript=1"
@@ -111,12 +111,20 @@
 <!-- End Facebook Pixel Code -->
 
 <script>
+  // Клик по кнопке
   function trackAndGoToEAA() {
     fbq('trackCustom', 'Click_TG_BOT_EAA_VN');
     setTimeout(function() {
       window.open('https://puziryov.com/use/eaa-ru-mainbot-tg/', '_blank');
     }, 300);
   }
+
+  // Задержка 7+ секунд = ViewContent_vn-eaa_7s
+  window.addEventListener('DOMContentLoaded', function () {
+    setTimeout(function () {
+      fbq('trackCustom', 'ViewContent_vn-eaa_7s');
+    }, 7000);
+  });
 </script>
 </body>
 </html>
