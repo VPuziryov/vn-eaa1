@@ -103,7 +103,6 @@
   'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '3153750001397422');
   fbq('track', 'PageView');
-  fbq('trackCustom', 'Subscribe');
 </script>
 <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=3153750001397422&ev=PageView&noscript=1"/></noscript>
@@ -112,10 +111,12 @@
 <script>
   function trackAndGoToEAA() {
     fbq('trackCustom', 'Click_TG_BOT_EAA_VN');
+    fbq('trackCustom', 'Subscribe'); // событие подписки при клике
     setTimeout(function() {
       window.open('https://puziryov.com/use/eaa-vn/', '_blank');
     }, 300);
   }
+
   window.addEventListener('DOMContentLoaded', function () {
     setTimeout(function () {
       fbq('trackCustom', 'ViewContent_vn-eaa_7s');
